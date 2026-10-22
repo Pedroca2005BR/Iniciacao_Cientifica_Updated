@@ -26,6 +26,16 @@ TagManager:
   - SamplesInfoPanel
   - QDSUIToggleCheckboxRadio
   - QDSUIToggleThumbnail
+  - Handle
+  - Locomotion
+  - LocoButton
+  - LocoText
+  - PassThroughButton
+  - PassThrough
+  - Bouncable
+  - Target
+  - Grabbable
+  - Fire
   layers:
   - Default
   - TransparentFX

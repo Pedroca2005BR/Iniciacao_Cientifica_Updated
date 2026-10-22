@@ -14,7 +14,7 @@ public class FireParticlesType : MonoBehaviour
 
     public FireType fireType;
 
-    public GameObject smokeParticle;
+   /*public GameObject smokeParticle;
 
     private void Awake()
     {
@@ -24,6 +24,6 @@ public class FireParticlesType : MonoBehaviour
     public void ActivateSmoke()
     {
         smokeParticle.gameObject.SetActive(true);
-    }
+    }*/
 
 }

@@ -13,6 +13,7 @@ public class ExtinguisherMixture : MonoBehaviour
     public MixtureType mixType;
     [SerializeField] private ParticleSystem mixtureParticle;
     [SerializeField] private float reduceFire = 0.1f;
+    [SerializeField] private int suavization = 1;
 
     private FireParticlesType fire;
 
@@ -59,13 +60,14 @@ public class ExtinguisherMixture : MonoBehaviour
         fire = other.GetComponent<FireParticlesType>();
         if (other.CompareTag("Fire") && FireTypeTrue())
         {
-            em -= reduceFire;
+            em -= reduceFire*suavization;
+            suavization++;
             Debug.Log(em);
             emission.rateOverTime = em;
             if(emission.rateOverTime.constant == 0f)
             {
                 emission.SetBurst(0, new ParticleSystem.Burst(0.0f, 0));
-                fire.ActivateSmoke();
+                //fire.ActivateSmoke();
             }
             
         }
