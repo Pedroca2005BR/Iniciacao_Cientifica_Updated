@@ -2,7 +2,6 @@ using Pedroca2005BR.Utilities;
 using Unity.VisualScripting;
 using UnityEngine;
 
-[RequireComponent (typeof(SphereCollider))]
 public class PhantomObjectController : MonoBehaviour
 {
     [Header("Phantom Mechanics")]
@@ -10,8 +9,8 @@ public class PhantomObjectController : MonoBehaviour
 
     //public GameObject baseObject;
 
-    [Tooltip("0 = phantom;\n1 = success")]
-    public Material[] materials;
+    public Material offRangeMaterial;
+    public Material onRangeMaterial;
 
     public Renderer rend;
 
@@ -21,50 +20,6 @@ public class PhantomObjectController : MonoBehaviour
 
     // Snap helpers
     public GameObject ObjectConnected { get; set; } = null;
-    
-
-    private void OnTriggerEnter(Collider other)
-    {
-        try
-        {
-            if (other.transform.parent.TryGetComponent<IInteractable>(out IInteractable component))
-            {
-                if (component.Type == type)
-                {
-                    TryChangeMaterial(1);
-                    isOnRange = true;
-                }
-            }
-        }
-        catch { }
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        try
-        {
-            if (other.transform.parent.TryGetComponent<IInteractable>(out IInteractable component))
-            {
-                if (component.Type == type)
-                {
-                    TryChangeMaterial(0);
-                    isOnRange = false;
-                }
-            }
-        }
-        catch { }
-    }
-
-    public bool TryChangeMaterial(int index)
-    {
-        if (materials == null || materials.Length <= index)
-        {
-            return false;
-        }
-
-        rend.material = materials[index];
-        return true;
-    }
 
 
     private void SnapToPosition(GameObject obj)
@@ -106,14 +61,14 @@ public class PhantomObjectController : MonoBehaviour
 
     private void OnEnable()
     {
-        EventManager.Subscribe("ItemDropped", OnItemDropped);
-        EventManager.Subscribe("ItemPickedUp", OnItemPickedUp);
+        EventManager.Subscribe(ConstantEventNames.ITEM_DROPPED, OnItemDropped);
+        EventManager.Subscribe(ConstantEventNames.ITEM_PICKED_UP, OnItemPickedUp);
     }
 
     private void OnDisable()
     {
-        EventManager.Unsubscribe("ItemDropped", OnItemDropped);
-        EventManager.Unsubscribe("ItemPickedUp", OnItemPickedUp);
+        EventManager.Unsubscribe(ConstantEventNames.ITEM_DROPPED, OnItemDropped);
+        EventManager.Unsubscribe(ConstantEventNames.ITEM_PICKED_UP, OnItemPickedUp);
 
     }
 
@@ -183,8 +138,8 @@ public class PhantomObjectController : MonoBehaviour
         if (ObjectConnected == null)
         {
             rend.enabled = true;
-            if (isOnRange) TryChangeMaterial(1);
-            else TryChangeMaterial(0);
+            //if (isOnRange) TryChangeMaterial(1);
+            //else TryChangeMaterial(0);
         }   
     }
 }

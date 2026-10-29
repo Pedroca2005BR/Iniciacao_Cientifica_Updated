@@ -47,4 +47,10 @@ namespace Pedroca2005BR.Utilities
             }
         }
     }
+
+    public static class ConstantEventNames
+    {
+        public const string ITEM_PICKED_UP = "Item Picked Up";
+        public const string ITEM_DROPPED = "Item Dropped";
+    }
 }
