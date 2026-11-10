@@ -28172,6 +28172,11 @@ Transform:
   - {fileID: 148092013}
   m_Father: {fileID: 1938092368}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &1029635773 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -5554547202139419899, guid: 735a40165ca1acf439facee538970010, type: 3}
+  m_PrefabInstance: {fileID: 1519321490}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1029904489
 GameObject:
   m_ObjectHideFlags: 0
@@ -33131,8 +33136,16 @@ PrefabInstance:
       value: FireParticles
       objectReference: {fileID: 0}
     - target: {fileID: 6141858752438411712, guid: 09fdb52e7be200e44a0136e88e2e9f5b, type: 3}
+      propertyPath: looping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6141858752438411712, guid: 09fdb52e7be200e44a0136e88e2e9f5b, type: 3}
       propertyPath: ShapeModule.type
-      value: 5
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6141858752438411712, guid: 09fdb52e7be200e44a0136e88e2e9f5b, type: 3}
+      propertyPath: ShapeModule.angle
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6141858752438411712, guid: 09fdb52e7be200e44a0136e88e2e9f5b, type: 3}
       propertyPath: ShapeModule.m_Scale.x
@@ -33143,8 +33156,20 @@ PrefabInstance:
       value: 0.29268494
       objectReference: {fileID: 0}
     - target: {fileID: 6141858752438411712, guid: 09fdb52e7be200e44a0136e88e2e9f5b, type: 3}
+      propertyPath: ShapeModule.m_MeshRenderer
+      value: 
+      objectReference: {fileID: 1029635773}
+    - target: {fileID: 6141858752438411712, guid: 09fdb52e7be200e44a0136e88e2e9f5b, type: 3}
       propertyPath: ShapeModule.radiusThickness
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6141858752438411712, guid: 09fdb52e7be200e44a0136e88e2e9f5b, type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6141858752438411712, guid: 09fdb52e7be200e44a0136e88e2e9f5b, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 6141858752438411712, guid: 09fdb52e7be200e44a0136e88e2e9f5b, type: 3}
       propertyPath: InitialModule.startLifetime.scalar
@@ -33152,15 +33177,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7579783782769744358, guid: 09fdb52e7be200e44a0136e88e2e9f5b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.2
+      value: -0.13
       objectReference: {fileID: 0}
     - target: {fileID: 7579783782769744358, guid: 09fdb52e7be200e44a0136e88e2e9f5b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.99
+      value: 1.27
       objectReference: {fileID: 0}
     - target: {fileID: 7579783782769744358, guid: 09fdb52e7be200e44a0136e88e2e9f5b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.2
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 7579783782769744358, guid: 09fdb52e7be200e44a0136e88e2e9f5b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -33189,6 +33214,18 @@ PrefabInstance:
     - target: {fileID: 7579783782769744358, guid: 09fdb52e7be200e44a0136e88e2e9f5b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8997918765387242186, guid: 09fdb52e7be200e44a0136e88e2e9f5b, type: 3}
+      propertyPath: m_SortingFudge
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8997918765387242186, guid: 09fdb52e7be200e44a0136e88e2e9f5b, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9102641832325774672, guid: 09fdb52e7be200e44a0136e88e2e9f5b, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
