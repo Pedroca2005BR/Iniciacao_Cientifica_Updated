@@ -10,6 +10,13 @@ public class GarraUse : MonoBehaviour, IHandGrabUseDelegate
     // Runtime variables
     bool wasPickedUp = false;
 
+    EPIIdentifier epiIdentifier;
+
+    private void Awake()
+    {
+        epiIdentifier = GetComponent<EPIIdentifier>();
+    }
+
     public void BeginUse() { }
 
     public float ComputeUseStrength(float strength)
@@ -19,14 +26,14 @@ public class GarraUse : MonoBehaviour, IHandGrabUseDelegate
         // Depending on the strength of the grip, it triggers a picked up or dropped event, heard by the phantom counterparts
         if (strength > 0.3f && !wasPickedUp)
         {
-            //EventManager.TriggerEvent(ConstantEventNames.ITEM_PICKED_UP, this);
-            Debug.LogError("Picked!");
+            EventManager.TriggerEvent(ConstantEventNames.ITEM_PICKED_UP, epiIdentifier);
+            //Debug.LogError("Picked!");
             wasPickedUp = true;
         }
         else if (strength <= 0.3f && wasPickedUp)
         {
-            //EventManager.TriggerEvent(ConstantEventNames.ITEM_DROPPED, this);
-            Debug.LogError("Dropped :3!");
+            EventManager.TriggerEvent(ConstantEventNames.ITEM_DROPPED, epiIdentifier);
+            //Debug.LogError("Dropped :3!");
             wasPickedUp = false;
         }
 
@@ -37,8 +44,8 @@ public class GarraUse : MonoBehaviour, IHandGrabUseDelegate
     {
         if (wasPickedUp)
         {
-            //EventManager.TriggerEvent(ConstantEventNames.ITEM_DROPPED, this);
-            Debug.LogError("Dropped :3!");
+            EventManager.TriggerEvent(ConstantEventNames.ITEM_DROPPED, epiIdentifier);
+            //Debug.LogError("Dropped :3!");
             wasPickedUp = false;
         }
 
