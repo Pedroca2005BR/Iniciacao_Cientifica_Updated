@@ -877,6 +877,7 @@ Transform:
   m_Children:
   - {fileID: 1928704334}
   - {fileID: 1414004088}
+  - {fileID: 1894785877}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &45087771
@@ -13561,6 +13562,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 769988722}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &512576562
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 512576563}
+  m_Layer: 0
+  m_Name: Chest
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &512576563
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 512576562}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1894785877}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &513830696
 GameObject:
   m_ObjectHideFlags: 0
@@ -14404,7 +14436,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2422618761686248255, guid: 9182fed62dbbec447a9b74fbb040b109, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.056
+      value: -0.203
       objectReference: {fileID: 0}
     - target: {fileID: 2422618761686248255, guid: 9182fed62dbbec447a9b74fbb040b109, type: 3}
       propertyPath: m_LocalRotation.w
@@ -36891,7 +36923,7 @@ Transform:
   m_GameObject: {fileID: 1461172479}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.006, z: 1.424}
+  m_LocalPosition: {x: -2.938, y: 0.177, z: 1.343}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -39951,7 +39983,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1645018419}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2756c251a8363df4f9d4b30ee6414bd9, type: 3}
+  m_Script: {fileID: 11500000, guid: 837ff792d23641a4fa0e06c3959cd710, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Oculus.Interaction::Oculus.Interaction.SnapInteractor
   _activeState: {fileID: 0}
@@ -39966,6 +39998,7 @@ MonoBehaviour:
   _defaultInteractable: {fileID: 0}
   _timeOutInteractable: {fileID: 0}
   _timeOut: 0
+  logCount: 0
 --- !u!4 &1645018421
 Transform:
   m_ObjectHideFlags: 0
@@ -42658,13 +42691,37 @@ PrefabInstance:
       propertyPath: m_Name
       value: SnapExample (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8361933903764905796, guid: 0abad5aeff43225448355798b37ba0ca, type: 3}
+      propertyPath: m_Size.x
+      value: 0.10950367
+      objectReference: {fileID: 0}
+    - target: {fileID: 8361933903764905796, guid: 0abad5aeff43225448355798b37ba0ca, type: 3}
+      propertyPath: m_Size.y
+      value: 0.19715543
+      objectReference: {fileID: 0}
+    - target: {fileID: 8361933903764905796, guid: 0abad5aeff43225448355798b37ba0ca, type: 3}
+      propertyPath: m_Size.z
+      value: 0.10077964
+      objectReference: {fileID: 0}
+    - target: {fileID: 8361933903764905796, guid: 0abad5aeff43225448355798b37ba0ca, type: 3}
+      propertyPath: m_Center.x
+      value: 0.0047518387
+      objectReference: {fileID: 0}
+    - target: {fileID: 8361933903764905796, guid: 0abad5aeff43225448355798b37ba0ca, type: 3}
+      propertyPath: m_Center.y
+      value: 0.04857772
+      objectReference: {fileID: 0}
+    - target: {fileID: 8361933903764905796, guid: 0abad5aeff43225448355798b37ba0ca, type: 3}
+      propertyPath: m_Center.z
+      value: 0.00038981996
+      objectReference: {fileID: 0}
     - target: {fileID: 9137757483998052930, guid: 0abad5aeff43225448355798b37ba0ca, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.171
       objectReference: {fileID: 0}
     - target: {fileID: 9137757483998052930, guid: 0abad5aeff43225448355798b37ba0ca, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.042
+      value: -0.0275
       objectReference: {fileID: 0}
     - target: {fileID: 9137757483998052930, guid: 0abad5aeff43225448355798b37ba0ca, type: 3}
       propertyPath: m_LocalPosition.z
@@ -42967,7 +43024,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.13
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 1b3285144d6dcfe48aa69c7693e67c25, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 34511d7ce58861a4ca011f79c463ddec, type: 2}
   m_BuildHeightMesh: 0
 --- !u!1 &1814635380
 GameObject:
@@ -44275,6 +44332,55 @@ Transform:
   m_Children: []
   m_Father: {fileID: 879485710}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1894785876
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1894785877}
+  - component: {fileID: 1894785878}
+  m_Layer: 0
+  m_Name: EquipmentManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1894785877
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1894785876}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 512576563}
+  m_Father: {fileID: 44044932}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1894785878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1894785876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f0550de4ddc3024c9a7810432784519, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Pedroca2005BR.EquipmentSystem.EquipmentManager
+  equipmentSlots:
+  - type: 2
+    offset: {fileID: 512576563}
+    currentEquipment: {fileID: 0}
 --- !u!1 &1898457787
 GameObject:
   m_ObjectHideFlags: 0
@@ -50190,6 +50296,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3835600487736324871, guid: 467fe990196149d41b35d6ccdcf6f3ec, type: 3}
+      propertyPath: _targetTransform
+      value: 
+      objectReference: {fileID: 7708433777368826991}
     - target: {fileID: 3932550713791662262, guid: 467fe990196149d41b35d6ccdcf6f3ec, type: 3}
       propertyPath: m_Name
       value: Extintor_A_WORKING
