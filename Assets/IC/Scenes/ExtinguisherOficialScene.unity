@@ -38184,6 +38184,32 @@ Transform:
   m_Children: []
   m_Father: {fileID: 467393492}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1570451016 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7286356256300633926, guid: 467fe990196149d41b35d6ccdcf6f3ec, type: 3}
+  m_PrefabInstance: {fileID: 1955155469}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &1570451017 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 352070950358463948, guid: 467fe990196149d41b35d6ccdcf6f3ec, type: 3}
+  m_PrefabInstance: {fileID: 1955155469}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1570451020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1570451016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6641beb7856d9d49885e523195f9ef6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ExtinguisherMixture
+  mixType: 3
+  mixtureParticle: {fileID: 1570451017}
+  reduceFire: 0.1
+  suavization: 1
 --- !u!1 &1574830353
 GameObject:
   m_ObjectHideFlags: 0
@@ -50551,7 +50577,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7286356256300633926, guid: 467fe990196149d41b35d6ccdcf6f3ec, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1570451020}
   m_SourcePrefab: {fileID: 100100000, guid: 467fe990196149d41b35d6ccdcf6f3ec, type: 3}
 --- !u!4 &1955155470 stripped
 Transform:
